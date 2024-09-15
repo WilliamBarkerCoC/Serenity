@@ -1,0 +1,9 @@
+{
+  "html": "serenity.html",
+  "css": "serenity.css",
+  "authors": "Vialmada",
+  "roll20userid": "10517273",
+  "preview": "serenityScreenshot.png",
+  "instructions": "Attribute, Skills and Derived Traits labels are the buttons. Specialities have a small button at the end of the field.",
+  "legacy": true
+}
