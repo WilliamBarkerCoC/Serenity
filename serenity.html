@@ -3752,12 +3752,12 @@
               <option value="d8">d8</option>
               <option value="d10">d10</option>
               <option value="d12">d12</option>
-              <option value="d12 + d2">d12 + d2</option>
-              <option value="d12 + d4">d12 + d4</option>
-              <option value="d12 + d6">d12 + d6</option>
-              <option value="d12 + d8">d12 + d8</option>
-              <option value="d12 + d10">d12 + d10</option>
-              <option value="d12 + d12">d12 + d12</option>
+              <option value="d12+d2">d12 + d2</option>
+              <option value="d12+d4">d12 + d4</option>
+              <option value="d12+d6">d12 + d6</option>
+              <option value="d12+d8">d12 + d8</option>
+              <option value="d12+d10">d12 + d10</option>
+              <option value="d12+d12">d12 + d12</option>
             </select>
 			<span><button class='sheet-small-button' type="roll" value="&{template:check} {{name=Specialty: @{Skill}}} {{Roll=[[@{Level}]]}}" name="roll_specialties"</button></span>
           </fieldset>
@@ -5716,19 +5716,19 @@ on("change:stuns change:wounds change:shocks change:LifePoints change:LifePenalt
   console.log("************ Start Hit Point Calculations ************"); 
   getAttrs(["stuns","wounds","shocks","Vitality","Willpower","TotalDamage","AttributePenaltyFlag"], function(values) {
 	let Stuns = parseInt(values.stuns)||0
-    let Wounds = parseInt(values.wounds)||0
+    	let Wounds = parseInt(values.wounds)||0
 	let Shocks = parseInt(values.shocks)||0
 	let lifePoints = maxValueFromDiceString(values.Vitality) + maxValueFromDiceString(values.Willpower)
 	let lifePenalty = lifePoints/2
 	let ReportedDamage = parseInt(values.TotalDamage)||0
-	let damage = Stuns + Wounds + Shocks
+	let damage = Wounds
 	console.log(" Damage by type: ");
 	console.log("   Stuns: " +  Stuns);
 	console.log("   Wounds: " +  Wounds);
 	console.log("   Shocks: " +  Shocks);
 	console.log("   Reported Damage: " +  ReportedDamage);
 	console.log("   Calcualted Damage: " +  damage);
-	if (damage > lifePenalty)
+	if (damage >= lifePenalty)
 		AttributePenaltyFlag = 1;
 	else
 		AttributePenaltyFlag = 0;
