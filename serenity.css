@@ -1201,6 +1201,15 @@
 .sheet-serenity-charactersheet .sheet-character-life-points .sheet-serenity-life-penalty input {
 	width: 32px
 }
+
+.sheet-serenity-charactersheet .sheet-character-life-points .sheet-serenity-skill-steps {
+    float: center;
+}
+
+.sheet-serenity-charactersheet .sheet-character-life-points .sheet-serenity-skill-steps input {
+	width: 32px
+}
+
 .sheet-serenity-charactersheet .sheet-character-attributes {
     text-align: right;
     float: left;
