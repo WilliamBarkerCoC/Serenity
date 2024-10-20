@@ -1613,32 +1613,42 @@
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-name-label,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-damage-label,
+.sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-numdie-label,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-range-label,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-rof-label,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-magazine-label,
+.sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-button-label,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-weight-label {
     display: inline-block;
     font-size: 75%;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-name-label {
-    width: 170px;
+    width: 160px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-damage-label {
-    width: 115px;
+    width: 105px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-range-label {
-    width: 50px;
+    width: 45px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-rof-label {
-    width: 40px;
+    width: 35px;
+}
+
+.sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-numdie-label {
+    width: 30px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-magazine-label {
     width: 30px;
+}
+
+.sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-button-label {
+    width: 20px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-unarmed .sheet-serenity-weapon-name {
@@ -1647,14 +1657,15 @@
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-name {
-    width: 160px;
+    width: 150px;
 }
 
+.sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-numdie,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-damage,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-weight,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-rof,
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-magazine {
-    width: 35px;
+    width: 35px !important;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-weapons .sheet-serenity-weapon-range {
@@ -1681,11 +1692,11 @@
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-armor .sheet-serenity-armor-rating-label {
-    width: 115px;
+    width: 120px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-armor .sheet-serenity-armor-penalty-label {
-    width: 80px;
+    width: 90px;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-character-armor .sheet-serenity-armor-name {
@@ -1759,27 +1770,38 @@
     border-top: 1px solid #CCCCCC;
     text-align: left;
     font-size: 12pt;
+	background: white; 
+	color: black;						  
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-tooltip .sheet-serenity-tooltip-text table th {
     text-align: center;
     padding: 0 8px;
+	color: black;		  
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-tooltip .sheet-serenity-tooltip-text table tr:first-child td {
     border: none;
+	background: white;																					   
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-tooltip .sheet-serenity-tooltip-text .sheet-serenity-tooltip-table-center td {
     text-align: center;
+	background: white;														  
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-tooltip .sheet-serenity-tooltip-text .sheet-serenity-tooltip-table-center-first-col td:first-child {
     text-align: center;
+	font-weight: bold;				   
+	background: white; 
+	color: black;
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-tooltip .sheet-serenity-tooltip-text .sheet-serenity-tooltip-table-left-first-col td:first-child {
     text-align: left;
+	font-weight: bold;				   
+	background: white; 				   
+	color: black;															  
 }
 
 .sheet-serenity-charactersheet .sheet-serenity-tooltip .sheet-serenity-tooltip-text.sheet-serenity-tooltip-text-wide {
@@ -1839,7 +1861,7 @@ div.sheet-tab-content {
     width: 100%;
 }
 
-/* Small-button used for Specialites to allow rolling */
+/* Small-button used for Specialites and equipment to allow rolling */
 
 .sheet button[type=roll].sheet-small-button {
 	color: black;
@@ -1851,7 +1873,7 @@ div.sheet-tab-content {
     box-shadow: none;
 }
 	
-/* 'invisible' textButton template for Attribute, Derivd Traits, and Skills checks */
+/* 'invisible' textButton template for Attribute, Derived Traits, and Skills checks */
 
 .ui-dialog .sheet-serenity-charactersheet button[type=roll]::before {
     content: ""; /* remove the dice icon, to make it 'invisible */
@@ -1867,7 +1889,7 @@ div.sheet-tab-content {
     text-shadow: none;
     box-shadow: none;
     padding: 0px;
-	padding-right: 2px;
+	padding-right: 1px;
     margin: 0px;
 }
 .sheet-serenity-charactersheet button[type=action].sheet-textButton {
@@ -1930,15 +1952,16 @@ input[type="radio"].sheet-tab:checked+span:before {
     border-bottom-color: #fff;
 }
 
-/* Roll template for Attribute, Derivd Traits, and Skills checks */
-
+/* Roll template for Attribute, Derived Traits, and Skills checks */
+.sheet-rolltemplate-combat table,
 .sheet-rolltemplate-check table {
     width: 189px;
     padding: 2px;
-	border: 2px solid #5ed7c4 ;
-    background-color: #1e4d43;
+	border: 2px solid #5ed7c4 ; /* Main colour Mint Green */
+    background-color: #1e4d43;  /* Dark Green */
 }
- 
+
+.sheet-rolltemplate-combat th,
 .sheet-rolltemplate-check th {
 	color: #5ed7c4;
     padding-left: 5px;
@@ -1949,6 +1972,7 @@ input[type="radio"].sheet-tab:checked+span:before {
     font-variant: normal;
 }
 
+.sheet-rolltemplate-combat tr,
 .sheet-rolltemplate-check tr {
 	color: #5ed7c4;
     padding-left: 5px;
@@ -1959,46 +1983,48 @@ input[type="radio"].sheet-tab:checked+span:before {
     font-variant: normal;
 }
 
+.sheet-rolltemplate-combat .sheet-subheader,
 .sheet-rolltemplate-check .sheet-subheader {
     color: #5ed7c4;
     font-size: 1em;
     font-style: italic;
 }
  
+.sheet-rolltemplate-combat .sheet-arrow-right,
 .sheet-rolltemplate-check .sheet-arrow-right {
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
 	border-left: 180px solid #5ed7c4;
 }
- 
+
+.sheet-rolltemplate-combat .sheet-tcat, 
 .sheet-rolltemplate-check .sheet-tcat {
     font-style: normal;
     color: #5ed7c4;
 }
  
-.sheet-rolltemplate-check td {
-    padding-left: 5px;
-}
  
-.sheet-rolltemplate-check .inlinerollresult  {
-    background-color: #1e4d43;
-    border: none;
+.sheet-rolltemplate-combat .sheet-tlcat, 
+.sheet-rolltemplate-check .sheet-tlcat {
+    font-style: normal;
+	font-size: 1.1em;
     color: #5ed7c4;
 }
  
-.sheet-rolltemplate-check .inlinerollresult.fullcrit {
-	color: #3FB315;
-    border: none;
-}
- 
-.sheet-rolltemplate-check .inlinerollresult.fullfail {
-	color: #B31515;
-    border: none;
-}
- 
-.sheet-rolltemplate-check .inlinerollresult.importantroll {
-	color: #4A57ED;
-    border: none;
+.sheet-rolltemplate-combat td, 
+.sheet-rolltemplate-check td {
+    padding-left: 5px;
 }
 
+/* Hide Areas functions */
+.sheet-collapse-show:not(:checked) ~.sheet-collapse {
+    display: none;
+}
+
+input.sheet-smallCheck {
+    margin: 0px 0px 0 0;
+	width: 9px;
+	height: 9px;
+	color: red;
+}
 /* Mixin */
